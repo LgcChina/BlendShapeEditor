@@ -5,7 +5,7 @@ Unity 2022.3 编辑器工具，用于删除、重命名、新建空形态键、�
 
 ## 通过 VCC / ALCOM 安装
 
-合集地址：<https://lgcchina.github.io/LGC-VRC-Packages/index.json>。
+合集地址：<https://lgcchina.github.io/LGC-VRC-Packages>。
 在 VCC / ALCOM 添加该合集，然后为项目安装 **LGC 形态键编辑器**（`com.lgcchina.blend-shape-editor`）。Unity 编译后，从 **LGC > 形态键编辑器** 打开。
 
 需要 Unity **2022.3**；不依赖 VRChat SDK、VRCFury 或 Modular Avatar。自动组合窗口已在 Unity 2022.3.22f1 验证。
