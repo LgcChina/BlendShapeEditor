@@ -1,0 +1,39 @@
+name: Publish VPM Package
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate and build the package
+        id: package
+        run: python scripts/package.py
+      - name: Publish release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ steps.package.outputs.tag }}
+          ZIP: ${{ steps.package.outputs.zip }}
+        run: |
+          test "$(git rev-parse "$TAG^{commit}")" = "$(git rev-parse HEAD)"
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --verify-tag --title "LGC BlendShape Editor $TAG" --notes-file dist/release-notes.md
+          fi
+          gh release upload "$TAG" "dist/$ZIP" dist/package.json --clobber

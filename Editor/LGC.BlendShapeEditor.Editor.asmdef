@@ -1,0 +1,7 @@
+{
+  "name": "LGC.BlendShapeEditor.Editor",
+  "rootNamespace": "LGC.BlendShapeTools",
+  "references": [],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

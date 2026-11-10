@@ -1,0 +1,25 @@
+{
+  "name": "com.lgcchina.blend-shape-editor",
+  "displayName": "LGC 形态键编辑器",
+  "version": "1.6.1",
+  "unity": "2022.3",
+  "description": "Unity 形态键编辑工具：删除、重命名、空形态键、混合、上限调整；支持双模型预览同步、自动左右分栏、网格恢复与覆盖输出。",
+  "author": {
+    "name": "LgcChina",
+    "email": "LgcChina@users.noreply.github.com",
+    "url": "https://github.com/LgcChina"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "vpmDependencies": {},
+  "url": "https://github.com/LgcChina/BlendShapeEditor/releases/download/v1.6.1/com.lgcchina.blend-shape-editor-1.6.1.zip",
+  "documentationUrl": "https://github.com/LgcChina/BlendShapeEditor#readme",
+  "changelogUrl": "https://github.com/LgcChina/BlendShapeEditor/blob/main/CHANGELOG.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LgcChina/BlendShapeEditor.git"
+  },
+  "legacyFolders": {
+    "Assets\\LGC\\For_Avatars\\Tools\\形态键编辑器\\Editor": "1e391a1c54c38fa41bc1baecda1947df"
+  }
+}
